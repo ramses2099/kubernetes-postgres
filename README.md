@@ -28,3 +28,6 @@ kubectl apply -f postgres-configmap.yml
 microk8s service postgres-service
 
 kubectl port-forward service\postgres-service 5432:5432
+
+## enable hostpath-storage
+microk8s enable hostpath-storage
