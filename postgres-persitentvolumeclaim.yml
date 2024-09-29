@@ -4,4 +4,4 @@ metadata:
   name: postgres-pvc
 spec:
   accessModes: [ReadWriteOnce]
-  resources: { request: { storage: 5Gi } }
+  resources: { requests: { storage: 5Gi } }
