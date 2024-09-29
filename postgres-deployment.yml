@@ -33,12 +33,12 @@ spec:
         - name: POSTGRES_DB
           value: "postgres"
         volumeMounts:
-        - name: postgresql-data
+        - name: postgres-storage
           mountPath: /var/lib/postgresql/data
       volumes:
-      - name: postgresql-data
+      - name: postgres-storage
         persistentVolumeClaim:
-          claimName: postgresql-pvc
+          claimName: postgres-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -51,4 +51,5 @@ spec:
     - protocol: TCP
       port: 5432
       targetPort: 5432
+      nodePort: 30080
   type: NodePort
