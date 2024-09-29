@@ -27,7 +27,12 @@ kubectl apply -f postgres-configmap.yml
 ## asign public api address
 microk8s service postgres-service
 
-kubectl port-forward service\postgres-service 5432:5432
+micro kubectl port-forward service\postgres-service 5432:5432
 
 ## enable hostpath-storage
 microk8s enable hostpath-storage
+
+## dashboard proxy
+microk8s dashboard-proxy
+
+https://10.0.0.50:10443
