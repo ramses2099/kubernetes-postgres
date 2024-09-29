@@ -37,8 +37,8 @@ spec:
           mountPath: /var/lib/postgresql/data
       volumes:
       - name: postgresql-data
-        hostPath:
-          path: /home/ramses2099/kubernetes-postgres/data
+        persistentVolumeClaim:
+        claimName: postgresql-pvc
 ---
 apiVersion: v1
 kind: Service
