@@ -5,9 +5,11 @@ Project kubernetes postgres SQL
 
 
 ## create secret with the username and password
+## Step 1: create secret
 kubectl apply -f postgres-secret.yml
 
 ## apply the deployment kubernetes postgres
+## Step 2: deploy kubernetes postgres
 kubectl apply -f postgres-deployment.yml
 
 ## check the deployment kubernetes postgres
