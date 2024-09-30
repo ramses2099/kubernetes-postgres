@@ -36,3 +36,14 @@ microk8s enable hostpath-storage
 microk8s dashboard-proxy
 
 https://10.0.0.50:10443
+
+## create alias for command microk8s kubectl
+## Step 1:
+- edit file .bashrc
+nano ~/.bashrc
+## Step 2:
+- add this line
+# alias kubectl
+alias kubectl="microk8s kubectl"
+## Step 3
+- save the file and close the console
