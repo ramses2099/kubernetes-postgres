@@ -47,3 +47,7 @@ nano ~/.bashrc
 alias kubectl="microk8s kubectl"
 ## Step 3
 - save the file and close the console
+
+## create storage class
+- kubectl apply -f postgres-sc.yml
+- kubectl get storageclass

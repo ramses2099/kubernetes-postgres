@@ -26,3 +26,7 @@ microk8s kubectl get pods
 ```
 microk8s kubectl describe pods
 ```
+
+
+## port foward
+kubectl port-forward service/postgresql-service 30080:5432

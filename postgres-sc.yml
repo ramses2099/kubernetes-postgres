@@ -1,0 +1,20 @@
+# storage class postgres-sc.yml
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: postgres-hostpath
+provisioner: microk8s.io/hostpath
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres-pv
+spec:
+  capacity:
+    storage: 4Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: postgres-hostpath
+  hostPath:
+    path: /mnt/d/ProjectKubernetes/kubernetes-postgres/data
